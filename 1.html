@@ -9,16 +9,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #e0e5f1; /* 蓝色调背景 */
         }
         header {
-            background-color: #333;
+            background-color: #002147; /* 深蓝色调 */
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
         nav {
-            background-color: #666;
+            background-color: #004b8d; /* 中等蓝色调 */
             padding: 10px 0;
             text-align: center;
         }
@@ -28,7 +28,7 @@
             padding: 0 10px;
         }
         nav a:hover {
-            background-color: #999;
+            background-color: #007bff; /* 亮蓝色调 */
         }
         section {
             padding: 20px;
@@ -36,13 +36,20 @@
             background-color: #fff;
         }
         footer {
-            background-color: #333;
+            background-color: #002147; /* 深蓝色调 */
             color: #fff;
             text-align: center;
             padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        /* 图片样式 */
+        .profile-img {
+            display: block;
+            margin: 0 auto 20px; /* 图片居中且下方留出一些空间 */
+            width: 150px; /* 图片宽度 */
+            border-radius: 50%; /* 圆形边框 */
         }
     </style>
 </head>
@@ -56,6 +63,8 @@
     </nav>
     <section>
         <h2>主页</h2>
+        <!-- 插入个人头像 -->
+        <img class="profile-img" src="https://oimages.anime-pictures.net/ccf/ccfe1e6058a954c9385ba300fd35049c.jpg?if=ANIME-PICTURES.NET_-_827257-1684x2048-honkai:+star+rail-honkai+(series)-sparkle+(honkai:+star+rail)-mskmmti-single-long+hair.jpg" alt="个人头像">
         <p>这里还什么也没有。</p>
     </section>
     <footer>
