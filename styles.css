@@ -1,77 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
+/* styles.css */
+
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 
-header, nav, section, footer {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 更舒适的字体 */
+    background-color: #f0f0f0; /* 浅灰色背景 */
+    color: #333; /* 深灰色文字 */
+    line-height: 1.6;
 }
 
 header {
-    background-color: #002147;
-    color: #fff;
+    background-color: #002147; /* 深蓝色调背景 */
+    color: #fff; /* 白色文字 */
+    padding: 20px 0;
     text-align: center;
 }
 
 nav {
-    background-color: #004b8d;
+    background-color: #004b8d; /* 中等蓝色调背景 */
     text-align: center;
+    padding: 10px 0;
 }
 
 nav a {
-    color: #fff;
+    color: #fff; /* 白色文字 */
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 20px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #007bff;
+    background-color: #007bff; /* 亮蓝色调背景 */
 }
 
 section {
-    border-radius: 5px;
+    padding: 40px;
+    margin: 20px auto; /* 居中 */
+    max-width: 800px; /* 最大宽度 */
+    background-color: #fff; /* 白色背景 */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 更明显的阴影效果 */
 }
 
 footer {
-    background-color: #002147;
-    color: #fff;
+    background-color: #002147; /* 深蓝色调背景 */
+    color: #fff; /* 白色文字 */
     text-align: center;
+    padding: 20px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-h1, h2, h3 {
-    color: #002147;
-}
-
-a {
-    color: #007bff;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-strong {
-    font-weight: bold;
-}
-
-img {
-    vertical-align: middle;
-    width: 20px;
-    margin-right: 5px;
+.profile-img {
+    display: block;
+    margin: 0 auto 20px; /* 图片居中且下方留出一些空间 */
+    width: 150px; /* 图片宽度 */
+    height: auto; /* 自动调整高度 */
+    border-radius: 50%; /* 圆形边框 */
 }
