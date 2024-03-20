@@ -9,16 +9,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #e0e5f1; /* 蓝色调背景 */
         }
         header {
-            background-color: #333;
+            background-color: #002147; /* 深蓝色调 */
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
         nav {
-            background-color: #666;
+            background-color: #004b8d; /* 中等蓝色调 */
             padding: 10px 0;
             text-align: center;
         }
@@ -28,7 +28,7 @@
             padding: 0 10px;
         }
         nav a:hover {
-            background-color: #999;
+            background-color: #007bff; /* 亮蓝色调 */
         }
         section {
             padding: 20px;
@@ -36,13 +36,25 @@
             background-color: #fff;
         }
         footer {
-            background-color: #333;
+            background-color: #002147; /* 深蓝色调 */
             color: #fff;
             text-align: center;
             padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        /* 图片样式 */
+        .profile-img {
+            display: block;
+            margin: 0 auto 20px; /* 图片居中且下方留出一些空间 */
+            width: 150px; /* 图片宽度 */
+            border-radius: 50%; /* 圆形边框 */
+        }
+        /* Bilibili图标样式 */
+        .bilibili-icon {
+            width: 20px; /* 图标宽度 */
+            vertical-align: middle; /* 垂直居中 */
         }
     </style>
 </head>
@@ -58,7 +70,7 @@
         <h2>联系信息</h2>
         <p>您可以通过以下方式联系我：</p>
         <ul>
-            <li><a href="https://m.bilibili.com/space/28067482">我的B站主页</a></li>
+            <li><a href="https://m.bilibili.com/space/28067482">我的B站主页 <img class="bilibili-icon" src="https://static.hdslb.com/images/favicon.ico" alt="Bilibili图标"></a></li>
             <li>邮箱：ice3247858362@gmail.com</li>
         </ul>
     </section>
