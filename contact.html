@@ -16,17 +16,31 @@
     </nav>
     <section>
         <h2>联系信息</h2>
+        <!-- 使用 GitHub API 获取头像 -->
+        <img src="" alt="Your Profile Picture" class="profile-picture" id="githubAvatar">
         <ul>
             <li><strong>Email:</strong> ice3247858362@gmail.com</li>
             <li><strong>Bilibili:</strong> <a href="https://m.bilibili.com/space/28067482"><img src="bilibili_logo.png" alt="Bilibili Logo"></a></li>
             <li><strong>微博:</strong> <a href="#"><img src="weibo_logo.png" alt="微博 Logo"></a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/3247858362"><img src="github_logo.png" alt="GitHub Logo"></a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/3247858362"><img src="" alt="GitHub Logo" id="githubLogo"></a></li>
         </ul>
-        <!-- 将个人头像直接使用GitHub账号头像 -->
-        <a href="https://github.com/3247858362"><img src="https://avatars.githubusercontent.com/u/3247858362" alt="Your Profile Picture" class="profile-picture"></a>
     </section>
     <footer>
         <p>&copy; 2024 冰凤的个人网站. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // 使用 GitHub API 获取用户信息
+        fetch('https://api.github.com/users/3247858362')
+            .then(response => response.json())
+            .then(data => {
+                // 更新头像和 GitHub Logo
+                document.getElementById('githubAvatar').src = data.avatar_url;
+                document.getElementById('githubLogo').src = 'github_logo.png';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
 </body>
 </html>
