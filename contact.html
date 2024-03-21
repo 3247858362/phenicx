@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>联系我</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 新增样式 */
+        ul {
+            list-style-type: none; /* 去掉列表样式 */
+        }
+        a {
+            text-decoration: none; /* 不显示下划线 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 更改字体 */
+            color: #333; /* 修改链接颜色 */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,9 +31,9 @@
         <img src="" alt="Your Profile Picture" class="profile-picture" id="githubAvatar">
         <ul>
             <li><strong>Email:</strong> ice3247858362@gmail.com</li>
-            <li><strong>Bilibili:</strong> <a href="https://m.bilibili.com/space/28067482"><img src="bilibili_logo.png" alt="Bilibili Logo"></a></li>
-            <li><strong>微博:</strong> <a href="#"><img src="weibo_logo.png" alt="微博 Logo"></a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/3247858362"><img src="" alt="GitHub Logo" id="githubLogo"></a></li>
+            <li><strong>Bilibili:</strong> <a href="https://m.bilibili.com/space/28067482">Bilibili</a></li>
+            <li><strong>微博:</strong> <a href="#">微博</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/3247858362">GitHub</a></li>
         </ul>
     </section>
     <footer>
@@ -34,9 +45,8 @@
         fetch('https://api.github.com/users/3247858362')
             .then(response => response.json())
             .then(data => {
-                // 更新头像和 GitHub Logo
+                // 更新头像
                 document.getElementById('githubAvatar').src = data.avatar_url;
-                document.getElementById('githubLogo').src = 'github_logo.png';
             })
             .catch(error => {
                 console.error('Error:', error);
