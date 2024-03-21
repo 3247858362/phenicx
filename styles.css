@@ -63,4 +63,14 @@ footer {
     width: 150px; /* 图片宽度 */
     height: auto; /* 自动调整高度 */
     border-radius: 50%; /* 圆形边框 */
+    animation: rotate 5s linear infinite; /* 添加旋转动画 */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
