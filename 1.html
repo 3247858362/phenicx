@@ -15,7 +15,7 @@
     </nav>
     <div class="container">
         <h1>欢迎来到冰凤的个人网站</h1>
-        <img src="https://avatars.githubusercontent.com/u/3247858362" alt="GitHub 头像" class="avatar">
+        <img src="" alt="GitHub 头像" id="avatar" class="avatar">
         <p>这里还什么也没有。</p>
         <h2>《清心决》</h2>
         <p>心若冰清，天塌不惊</p>
@@ -44,5 +44,17 @@
         <p>清新治本，直道谋身</p>
         <p>至性至善，大道天成！</p>
     </div>
+
+    <script>
+        // 使用 GitHub API 获取用户信息
+        fetch('https://api.github.com/users/3247858362')
+            .then(response => response.json())
+            .then(data => {
+                const avatarUrl = data.avatar_url;
+                // 更新头像
+                document.getElementById('avatar').src = avatarUrl;
+            })
+            .catch(error => console.error('获取用户信息时出错：', error));
+    </script>
 </body>
 </html>
