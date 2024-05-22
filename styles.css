@@ -37,3 +37,11 @@ h1 {
 p {
     line-height: 1.6;
 }
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar a {
+        padding: 0.5rem;
+    }
+}
