@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/live2d-widget@1.0.5/dist/live2d.min.css">
-    <script src="https://unpkg.com/live2d-widget@1.0.5/dist/live2d.min.js"></script>
-    <title>主页</title>
 </head>
 <body>
     <nav class="navbar">
@@ -47,17 +46,10 @@
         <p>至性至善，大道天成！</p>
     </div>
 
-    <script>
-        // 使用 GitHub API 获取用户信息
-        fetch('https://api.github.com/users/3247858362')
-            .then(response => response.json())
-            .then(data => {
-                const avatarUrl = data.avatar_url;
-                // 更新头像
-                document.getElementById('avatar').src = avatarUrl;
-            })
-            .catch(error => console.error('获取用户信息时出错：', error));
-    </script>
+    <!-- 加载 Live2D Widget 脚本 -->
+    <script src="https://unpkg.com/live2d-widget@1.0.5/dist/live2d.min.js"></script>
+
+    <!-- 初始化 Live2D Widget -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             L2Dwidget.init({
